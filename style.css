@@ -1,0 +1,100 @@
+
+@font-face {
+  font-family: 'JosefinSans';
+  src: url('fonts/JosefinSans.ttf');
+}
+
+@font-face {
+  font-family: 'JosefinSansLight';
+  src: url('fonts/JosefinSans-Light.ttf');
+}
+
+@font-face {
+  font-family: 'JosefinSansBold';
+  src: url('fonts/JosefinSans-Bold.ttf');
+}
+
+::selection {
+  background-color: rgba(255, 255, 0, 0.405);
+}
+
+body {
+  margin: 0;
+  font-family: 'JosefinSans';
+  background-color: black;
+}
+
+.main {
+  width: 100vw;
+  background-color: rgb(7, 7, 7);
+  font-family: 'JosefinSans';
+}
+
+.movie-screen {
+  height: 80vh;
+  width: 100vw;
+  background-color: rgb(179, 179, 179);
+  background: url('meyerowitzstill.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  transition: 0.2s opacity ease-in-out;
+}
+
+.movie-screen:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.movie-screen-title {
+  color: rgb(228, 193, 39);
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  height: calc(100vh - 20px);
+  width: calc(100vw - 20px);
+  display: flex;
+  margin: 10px;
+  flex-flow: column;
+  font-family: 'JosefinSans';
+}
+
+.content > p {
+  color: rgb(229, 229, 229);
+  font-size: 1.4em;
+  font-family: 'JosefinSans';
+}
+
+.titles-row {
+  flex: 1;
+  min-height: 17%;
+  max-height: 17%;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.title {
+  flex: 1;
+  min-width: 17%;
+  margin-right: 2px;
+  margin-left: 2px;
+  border-radius: 2px;
+  background: url('posters/greenknightposter.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.title:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}

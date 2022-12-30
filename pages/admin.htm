@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+
+<body>
+    <input type="file" id="thumbnailFile">
+    <input type="file" name="" id="movieFile">
+    <input type="text" id="moveName">
+    <label for="genreSelect">Select a genre:</label>
+
+    <select id="genreSelect">
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="action">Action</option>
+        <option value="thriller">Thriller</option>
+        <option value="sci-fi">Sci-fi</option>
+        <option value="romance">Romance</option>
+        <option value="documentary">Documentary</option>
+    </select>
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDYcneksxww07QG7ma6syWhKmt_0Ek6_zI",
+        authDomain: "testingifworks.firebaseapp.com",
+        projectId: "testingifworks",
+        storageBucket: "testingifworks.appspot.com",
+        messagingSenderId: "908822427879",
+        appId: "1:908822427879:web:89be905eaf7444224c8a42",
+        measurementId: "G-80SS53R7XN"
+    };
+
+    // initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+<script>
+    firebase.database().ref('users/' + (localStorage.getItem("idCurrent") + '/') + 'posts/' + 'userPosts/' + '/' + postVal).set({
+        email: localStorage.getItem("emailCurrent"),
+        content: content,
+        date: date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear(),
+        op1: op1.value,
+        op2: op2.value,
+        op3: op3.value,
+        op4: op4.value,
+        tag: selectTag.value,
+    });
+</script>
+
+</html>
